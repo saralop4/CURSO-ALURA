@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calcular IMC</h1>
+    <script>
+        let peso = 62
+        let altura = 1.62 
+        let imc = peso / (altura * altura)
+
+        function imprimir(resul) {
+
+            document.write(resul);
+            document.write("<br>")
+        }
+        function calcularImc(peso, altura) {
+
+            imc = peso / (altura * altura)
+            imprimir("Imprimiendo imc desde la funcion: " + imc)
+            document.write("<br>")
+        }
+        calcularImc(peso,altura);
+        imprimir("El IMC de Sarah es: " + imc)
+
+    </script>
+</body>
+
+</html>
