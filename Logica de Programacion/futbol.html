@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>PROGRAMA - CALCULAR PUNTOS DE UN EQUIPO DE FUTBOL</h1>
+    <script>
+
+        function saltarLinea() {
+            document.write("<br><br><br>");
+        }
+        function imprimirFrase(frase){
+            document.write(frase);
+            saltarLinea();
+        }
+
+        var victorias = parseInt(prompt("Informe la cantidad de victorias: ")) ;
+        var empates = prompt("Informe la cantidad de empares: ");
+        puntosTotal = (victorias*3)+ parseInt(empates) ;
+
+        imprimirFrase("El total del equipo es : " + puntosTotal);
+        
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
