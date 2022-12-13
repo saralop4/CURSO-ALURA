@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CALCULANDO MI IMC</h1>
+    <script>
+        function calcularImc(peso, altura) {
+            imc = peso / (altura * altura);
+            return imc;
+        }
+        function imprimir(valor) {
+            document.write(valor);
+            document.write("<br>")
+        }
+        function imc() {
+            let peso = parseFloat(prompt("Digita su peso: "));
+            let altura = parseFloat(prompt("Digite su altura"));
+            let resul = calcularImc(peso, altura)
+            var bajo = "Bajo Peso";
+
+            document.write("SU IMC ES: " + resul);
+            document.write("<br><br>")
+
+            if (resul < 18.5) {
+                imprimir("");
+               document.write("");
+
+            }
+            if (resul >= 18.5 && resul <= 24.9) {
+
+                imprimir("Peso Normal");
+            }
+            if (resul >= 25.0) {
+                imprimir("Sobre Peso");
+            }
+
+        }
+
+        imc();
+    </script>
+</body>
+
+</html>

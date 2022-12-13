@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>****JUEGO DE SORTEO****</h1>
+    <script>
+
+        function imprimir(valor) {
+            document.write(valor);
+            document.write("<br>")
+        }
+
+        function sorteo(valor){
+            return num = Math.round(Math.random()*valor);
+        }
+
+        var n = parseInt(prompt("Ingrese un numero"))
+        var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 y 10: "))
+        numeroPensado = sorteo(n);
+      
+
+        if (numeroPensado<numeroLanzado) {
+            imprimir("El Numero es Menor al Pensado");
+        }
+        else{
+            imprimir("El Numero es Mayor al Pensado");
+        }
+   
+        
+    </script>
+</body>
+</html>

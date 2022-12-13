@@ -26,6 +26,17 @@
         puntosTotal = (victorias*3)+ parseInt(empates) ;
 
         imprimirFrase("El total del equipo es : " + puntosTotal);
+
+        if(puntosTotal>28){
+            imprimirFrase("El equipo esta mejor que el año pasado");
+        }
+        if (puntosTotal<28){
+
+            imprimirFrase("El equipo esta peor que el año pasado");
+        }
+        if(puntosTotal==28){
+            imprimirFrase("El equipo esta igual que el año pasado");
+        }
         
 
 
