@@ -17,18 +17,23 @@
             document.write("<br>")
         }
 
-        var numeroPensado = Math.round(Math.random()*10)
-        var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 y 10: "))
+        var numeroPensado = Math.round(Math.random() * 10)
+        intentos = 3;
+        contador = 1;
 
-        if (numeroPensado == numeroLanzado) {
-            imprimir("Usted Acerto");
-        }
-        else{
-            imprimir("Usted erro, el numero pensado era : " + numeroPensado);
+        while (contador <= intentos) {
+            var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 y 10: "))
+            if (numeroPensado == numeroLanzado) {
+                alert("Usted Acerto en el intento "+ contador);
+                break;
             }
+            else {
+                alert("Usted erro !");
+            }
+            contador++;
+        }
+        imprimir("El numero pensado era: " + numeroPensado);
     </script>
-
-
 </body>
 
 </html>

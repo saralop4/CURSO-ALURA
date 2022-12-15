@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>**** PROGRAMA PARA CALCULAR MEDIA****</h1>
+    <script>
+        function imprimir(valor) {
+            document.write(valor);
+            document.write("<br><br>");
+        }
+
+        var cantidad = parseInt(prompt("Digite la cantidad de miembros de su familia: "));
+        var contador = 1;
+        var totalEdades = 0;
+
+        while (contador <= cantidad) {
+            edad = parseInt(prompt("Ingrese la edad del miembro: "));
+            totalEdades = totalEdades + edad;
+            contador++;
+        }
+        media = totalEdades / cantidad;
+        imprimir("Media: "+ media);
+
+    </script>
+</body>
+
+</html>
