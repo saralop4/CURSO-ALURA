@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>PROGRAMA - CANVAS</h1>
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = "grey ";
+        pincel.fillRect(0, 0, 600, 400);
+
+        function dibujarCirculo(evento) {
+            var x = evento.pageX - pantalla.offsetLeft; //pos x
+            var y = evento.pageY - pantalla.offsetTop; //pos y
+            pincel.fillStyle = "orange";
+            pincel.beginPath();
+            pincel.arc(x, y, 10, 0, 2 * 3.14); //5 parametros:coordenadas,radio,angulo inicial,angulo final
+            pincel.fill(); //para que se muestre el circulo
+            console.log(x + " , " + y);
+
+        }
+        pantalla.onclick = dibujarCirculo;
+
+        function alterarColor(oncontextmenu) {
+            var x = oncontextmenu.pageX - pantalla.offsetLeft; //pos x
+            var y = oncontextmenu.pageY - pantalla.offsetTop; //pos y
+            pincel.fillStyle = "blue";
+            pincel.beginPath();
+            pincel.arc(x, y, 10, 0, 2 * 3.14); //5 parametros:coordenadas,radio,angulo inicial,angulo final
+            pincel.fill(); //para que se muestre el circulo
+            console.log(x + " , " + y);
+            return false;
+        }
+        pantalla.oncontextmenu = alterarColor;
+
+    </script>
+
+
+</body>
+
+</html>
