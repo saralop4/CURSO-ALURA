@@ -1,2 +1,2 @@
 # CURSO-ALURA
-Diplomado de programación FullStack con Oracle y Alura Latam
+Logica de Programnacion con oracle y alura latam.
